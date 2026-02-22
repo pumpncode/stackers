@@ -1,7 +1,7 @@
 {
 	"name": "stackers",
 	"id": "stackers",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Makes the stake win stickers stacked",
 	"prefix": "stackers",
 	"author": [
@@ -10,8 +10,5 @@
 		"LasagnaFelidae",
 		"nnmrts"
 	],
-	"main_file": "main.lua",
-	"dependencies": [
-		"malverk (>=1.1.4b)"
-	]
+	"main_file": "main.lua"
 }
