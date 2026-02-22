@@ -50,16 +50,16 @@ local function get_all_win_stakes(card)
 
 	if not wins_by_key then return {}; end;
 
-	local applied = {};
+	local won = {};
 
 	for k, v in pairs(wins_by_key) do
-		SMODS.build_stake_chain(G.P_STAKES[k], applied);
+		if G.P_STAKES[k] then won[G.P_STAKES[k].order] = true; end;
 	end;
 
 	local result = {};
 
 	for i, v in ipairs(G.P_CENTER_POOLS.Stake) do
-		if applied[v.order] then result[#result + 1] = v; end;
+		if won[v.order] then result[#result + 1] = v; end;
 	end;
 
 	return result;
